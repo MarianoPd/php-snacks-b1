@@ -1,4 +1,9 @@
+
+
 <?php
+
+        //Inserire da url min e max
+
     $nElement = 15;
     $min = $_GET['min'];
     $max = $_GET['max'];
