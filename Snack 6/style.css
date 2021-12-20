@@ -1,0 +1,8 @@
+.gray, .green{
+    width: 500px;
+    padding: 50px;
+}
+
+.gray{ background-color: lightgrey;}
+
+.green{ background-color: lightgreen;}
