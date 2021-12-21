@@ -37,22 +37,22 @@
             $newElement .= ' ';
             $newElement .= $tempElement['lastname'];
             //echo $newElement;
+            $newArray[] = $newElement;
         }
-        var_dump($newElement);
+        //var_dump($newArray);
         return $newArray;
     }
     function printNames($names){
-        $string = '';
         for($i =0; $i < count($names); $i++){
-            $string .= '<h2> $names[$i] </h2>';
+            echo "<li> $names[$i] </li>";
         }
-        return $string;
     }
 
     $teachers = extractNames('teachers', $db);
     $PMS =  extractNames('pm', $db);
 
-    var_dump($teachers);
+    //var_dump($teachers);
+    //var_dump($PMS);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,15 +65,18 @@
 </head>
 <body>
     <div class="gray">
-        <?php
-            echo "$teachers[0]";
-        ?>
+        <ul>
+            <?php
+                printNames($teachers);
+            ?>
+        </ul>
     </div>
     <div class="green">
-        <?php
-            
-        ?>
-        
+        <ul>
+            <?php
+                printNames($PMS);
+            ?>
+        </ul>
     </div>
     
 </body>
